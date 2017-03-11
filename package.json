@@ -1,0 +1,25 @@
+{
+  "name": "JavaScript-Project-3",
+  "version": "1.0.0",
+  "description": "JavaScript Project 3",
+  "main": "app/aritGeo.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jasmine test/aritGeoTest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oladimeji9/JavaScript-Project-3.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "Akande Oladimeji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oladimeji9/JavaScript-Project-3/issues"
+  },
+  "homepage": "https://github.com/oladimeji9/JavaScript-Project-3#readme"
+}
