@@ -64,6 +64,19 @@ describe("Determine the sequence of an array of numbers: ", function () {
                 expect(myApp.aritGeo([1, 8, 27, 64, 125])).toEqual(-1);
             });
 
-        });
+        });	describe("Case for an arithmetic sequence", function () {
+
+            it("should return `Arithmetic` for [20, 40, 60, 80, 100]", function () {
+                expect(myApp.aritGeo([20, 40, 60, 80, 100])).toEqual('Arithmetic');
+            });
+
+            it("should return `Arithmetic` for [5, 11, 17, 23, 29, 35, 41]", function () {
+                expect(myApp.aritGeo([5, 15, 25, 30, 40, 50, 60])).toEqual('Arithmetic');
+            });
+
+            it("should return `Arithmetic` for [15, 10, 5, 0, -5, -10]", function () {
+                expect(myApp.aritGeo([8, 16, 24, 32, 40])).toEqual('Arithmetic');
+            });
+	});
     });
 })();
