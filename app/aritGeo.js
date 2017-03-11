@@ -1,12 +1,12 @@
 ﻿
-exports.aritGeo = function(arr) {
+function aritGeo(arr) {
 
-    var arithmetic = false,
-    geometric = false,
-    d1 = arr[1] - arr[0],
-    d2 = arr[2] - arr[1],
-    r1 = arr[1] / arr[0],
-    r2 = arr[2] / arr[1];
+    var arithmetic = false;
+    var geometric = false;
+    var d1 = arr[1] - arr[0];
+    var d2 = arr[2] - arr[1];
+    var r1 = arr[1] / arr[0];
+    var r2 = arr[2] / arr[1];
 
     if (d1 === d2) {
         arithmetic = true;
@@ -24,7 +24,7 @@ exports.aritGeo = function(arr) {
     else if (arr.length === 0) {
         return 0;
     }
-    else if (!arithmetic || !geometric) {
+    else if (!arithmetic && !geometric && arr.length > 0) {
         return -1;
     }
 }
