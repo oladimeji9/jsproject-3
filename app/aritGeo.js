@@ -1,30 +1,36 @@
-﻿
-exports.aritGeo = function(arr) {
 
-    var arithmetic = false,
-    geometric = false,
-    d1 = arr[1] - arr[0],
-    d2 = arr[2] - arr[1],
-    r1 = arr[1] / arr[0],
-    r2 = arr[2] / arr[1];
-
-    if (d1 === d2) {
-        arithmetic = true;
+var aritGeo = function(arr) {
+  var arithmetic = [];
+  var geometric = [];
+  var isArithmetic = false;
+  var isGeometric = false;
+   
+  for(var i = 0; i < arr.length; i++){
+    arithmetic.push(arr[i+1] - arr[i]);
+    geometric.push(arr[i+1] / arr[i]);
+  }
+  
+  for(var j = 0; j < arithmetic.length-1; j++){
+    if(arithmetic[j+1] === arithmetic[j]){
+      isArithmetic = true;
     }
-    if (r1 === r2) {
-        geometric = true;
+    if(geometric[j+1] === geometric[j]){
+      isGeometric = true;
     }
-
-    if (arithmetic) {
-        return "Arithmetic";
-    }
-    else if (geometric) {
-        return "Geometric";
-    }
-    else if (arr.length === 0) {
-        return 0;
-    }
-    else if (!arithmetic || !geometric) {
-        return -1;
-    }
+  }
+  
+  if(isArithmetic) {
+    return "Arithmetic";
+  }
+  if (isGeometric) {
+    return "Geometric";
+  }
+  if (arr.length === 0) {
+    return 0;
+  }
+  else if(!isArithmetic && !isArithmetic) {
+    return -1;
+  }  
 }
+
+module.exports = aritGeo;
